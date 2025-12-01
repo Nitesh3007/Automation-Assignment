@@ -1,0 +1,38 @@
+# Node.js dependencies
+node_modules/
+
+# Playwright test results
+test-results/
+
+# Environment files
+.env
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+*.iml
+
+# Coverage reports
+coverage/
+
+# Build files
+dist/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Ignore Playwright trace files
+*.zip
+*.trace
+*.jsonl
