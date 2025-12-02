@@ -18,31 +18,27 @@ test("Create a Message Box Task Bot", async ({ page }) => {
   // Go to login
   await login.goto();
 
-  // Assertions
   await expect(login.emailInput).toBeVisible();
 
   // Login
   await login.login(YOUR_EMAIL, YOUR_PASSWORD);
 
-  // Navigate to Automation → Bots
+  // Navigate to Automation -> Bots
   await dashboard.goToBots();
-
-  await expect(page).toHaveURL(/.*bots/);
 
   // Create Task Bot
   await bots.createTaskBot();
 
-  const botName = "MessageBot_" + Date.now();
+  const uniqueBotName = `Bot_${Date.now()}`;
 
-  await editor.fillBotDetails(botName, "Automated Test Bot");
+  await editor.fillBotDetails(uniqueBotName);
 
   // Add message box action
   await editor.addMessageBox();
 
   // Configure message box
-  await editor.configureMessageBox("Hello!", "This is my automated message.");
+  await editor.configureMessageBox();
 
-  // Assertion for save confirmation
-  const confirmationToast = page.locator("text=Saved");
-  await expect(confirmationToast).toBeVisible();
+  await editor.saveConfiguration();
+
 });

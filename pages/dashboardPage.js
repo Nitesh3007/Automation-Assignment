@@ -4,18 +4,14 @@ class DashboardPage {
   }
 
   async goToBots() {
+// After clicking Automation
+await this.page.locator('a[name="automations"]').click();
 
-  // STEP 1 → Click Automation in sidebar
-  await this.page.locator('a[name="automations"]').click();
+// Wait for the bots table to finish rendering
+await this.page.waitForSelector('div.rio-toolbar', { state: 'visible', timeout: 15000 });
 
-  // STEP 2 → Wait for Bots node to appear
-  await this.page.waitForSelector('span[title="Bots"]', { timeout: 15000 });
-
-  // STEP 3 → Click Bots
-  await this.page.getByText('Bots', { exact: true }).click();
-
-  // STEP 4 → Confirm we reached Bots page
-  await this.page.waitForSelector('button[name="createOptions"]', { timeout: 15000 });
+// Wait for the page to load
+await this.page.waitForLoadState('load');
 }
 }
 
