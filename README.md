@@ -66,8 +66,9 @@ npx playwright show-report
 | -------------- | -------------------------------- |
 | Automation     | **Playwright**                   |
 | Design Pattern | **Page Object Model (POM)**      |
-| Language       | **TypeScript**                   |
+| Language       | **Javascript**                   |
 | Test Runner    | Playwright Test                  |
 | Reporting      | Playwright HTML Report           |
 
 ---
+
