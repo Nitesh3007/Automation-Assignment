@@ -7,10 +7,12 @@ Form with Upload Flow (UI Automation)
 Learning Instance API Flow (API Automation)
 
 1. Install dependencies
-npm install
+    npm install
+
 
 2. Install Playwright browsers
 npx playwright install
+
 
 3. Add environment variables
 
@@ -34,3 +36,4 @@ npx playwright test --headed
 
 Show HTML report
 npx playwright show-report
+
