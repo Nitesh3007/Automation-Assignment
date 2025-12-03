@@ -3,7 +3,7 @@ import { test, expect, request } from "@playwright/test";
 test.describe("Learning Instance API Automation", () => {
   let apiContext;
   let authToken;
-  let baseUrl = "https://community.cloud.automationanywhere.digital"; // change if needed
+  let baseUrl = "https://community.cloud.automationanywhere.digital"; 
 
   test.beforeAll(async () => {
     apiContext = await request.newContext({
@@ -11,7 +11,7 @@ test.describe("Learning Instance API Automation", () => {
     });
 
     // LOGIN API
-    const loginResponse = await apiContext.post("/v2/authentication", {   // <-- update exact API path  
+    const loginResponse = await apiContext.post("/v2/authentication", {   
       data: {
         username: "niteshthebest1@gmail.com",
         password: "Auto@123"
