@@ -39,11 +39,10 @@ test.describe("Learning Instance API Automation", () => {
 
   test("Create Learning Instance & Validate", async () => {
 
-    // STEP 3 — CREATE LEARNING INSTANCE
     const payload = {
       name: "Automation-Test-Instance-" + Date.now(),
       description: "Created via Playwright API automation",
-      type: "UNSTRUCTURED",                 // replace with values found in Network tab
+      type: "UNSTRUCTURED",     
       language: "ENGLISH"
     };
 
