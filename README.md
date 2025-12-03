@@ -1,39 +1,73 @@
-﻿# Automation-Assignment
-This repository contains UI automation and API automation scripts developed using Playwright with the Page Object Model (POM) design pattern.
+This repository contains **UI automation** and **API automation** scripts developed using **Playwright** with the **Page Object Model (POM)** design pattern.
 The automation covers three use cases:
 
-Message Box Task Creation (UI Automation)
-Form with Upload Flow (UI Automation)
-Learning Instance API Flow (API Automation)
+1. **Message Box Task Creation (UI Automation)**
+2. **Form with Upload Flow (UI Automation)**
+3. **Learning Instance API Flow (API Automation)**
 
-1. Install dependencies
-    npm install
+## 🚀 Setup Instructions
 
+### 1. Install dependencies
 
-2. Install Playwright browsers
+```bash
+npm install
+```
+
+### 2. Install Playwright browsers
+
+```bash
 npx playwright install
+```
 
+### 3. Add environment variables
 
-3. Add environment variables
+Create a `.env` file:
 
-Create a .env file:
+```
+LOGIN_USERNAME=your-email
+LOGIN_PASSWORD=your-password
 
-AA_USERNAME=your-email
-AA_PASSWORD=your-password
+```
 
-▶️ Running the Tests
-Run all tests
+---
+
+##  Running the Tests
+
+### Run all tests
+
+```bash
 npx playwright test
+```
 
-Run UI tests only
+### Run UI tests only
+
+```bash
 npx playwright test tests/ui
+```
 
-Run API tests only
+### Run API tests only
+
+```bash
 npx playwright test tests/api
+```
 
-Run with headed mode
-npx playwright test --headed
+### Show HTML report
 
-Show HTML report
+```bash
 npx playwright show-report
+```
 
+---
+
+
+# 🛠 Tools & Frameworks Used
+
+| Component      | Technology                       |
+| -------------- | -------------------------------- |
+| Automation     | **Playwright**                   |
+| Design Pattern | **Page Object Model (POM)**      |
+| Language       | **TypeScript**                   |
+| Test Runner    | Playwright Test                  |
+| Reporting      | Playwright HTML Report           |
+
+---
